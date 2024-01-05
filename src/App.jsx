@@ -8,7 +8,7 @@ function App() {
   const [password,setpassword] = useState("")
 
   const passwordref = useRef(null)
-
+console.log("password");
   const passwordGenerator = useCallback(() => { // useCallback m optimisation ki baat hoti h !
     let pass=""
     let str = "ABCDEFGHIJKLMNOPQRSTUCWXYZ"
@@ -25,7 +25,7 @@ function App() {
     setpassword(pass) 
 // setpassword(dependency) sare function ko cache memory m rkhta h
   },[length,numAllowed,charAllowed,setpassword])
-
+console.log("length not fixed");
 
 const copyPasswordToClipboard = useCallback(() => {
   passwordref.current?.select()
