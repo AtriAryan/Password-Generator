@@ -25,6 +25,7 @@ console.log("password");
     setpassword(pass) 
 // setpassword(dependency) sare function ko cache memory m rkhta h
   },[length,numAllowed,charAllowed,setpassword]) 
+
 console.log("length not fixed");
 
 const copyPasswordToClipboard = useCallback(() => {
@@ -42,7 +43,7 @@ useEffect (() => {
   return (
     <>
   <div className='w-full max-wd-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-500 bg-gray-400 ' >
-    <h1 className='text-center text-blue-300'>Password Generator</h1>
+    <h1 className='text-center text-blue-700'>Password Generator</h1>
    <div className='flex shadow rounded-lg overflow-hidden mb-4' >
 <input 
 type="text" 
@@ -56,8 +57,8 @@ ref={passwordref}
 onClick={copyPasswordToClipboard}
 className='text-white bg-blue-700'>copy</button>
    </div>
-   <div className='flex text-sm gap-x-2'>
-    <div className='flex items-center gap-x-1'>
+   <div className='flex text-sm gap-x-2 bg-yellow-500'>
+    <div className='flex items-center gap-x-1 '>
       <input  
       type='range'
       min={8}
